@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "音乐",
+  "navigationBarBackgroundColor": "#fafafa",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "banner-list": "/components/banner-list/banner-list",
+    "area-header": "/components/area-header/area-header",
+    "song-item-v1": "/components/song-item-v1/song-item-v1",
+    "menu-item": "/components/menu-item/menu-item",
+    "menu-area": "/components/menu-area/menu-area",
+    "rank-item": "/components/rank-item/rank-item"
+  }
+}

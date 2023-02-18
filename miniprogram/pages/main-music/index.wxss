@@ -1,0 +1,27 @@
+/* pages/main-music/index.wxss */
+page{
+  background: #fafafa;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.van-search__content{
+  background-color: #fff !important;
+}
+.van-search{
+  padding: 10px 0 !important;
+}
+.hot-menu .list{
+  overflow: hidden;
+  width: 750rpx;
+  margin-left: -24rpx;
+  height: 300rpx;
+  display: flex;
+}
+.hot-menu .list .item{
+  width: 220rpx ;
+  flex-shrink: 0;
+  margin-left: 24rpx;
+}
+.hot-menu .list .item:last-child{
+  padding-right: 24rpx;
+}

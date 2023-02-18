@@ -1,0 +1,54 @@
+/* components/song-list/song-list.wxss */
+.views{
+  position: fixed;
+  bottom: 50rpx;
+  left: 3%;
+  height: 600rpx;
+  width: 94%;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  padding: 30rpx 0;
+  transition: all 500ms;
+  background-size: cover !important;
+}
+.scroll-view{
+  position: fixed;
+  bottom: 50rpx;
+  left: 3%;
+  height: 600rpx;
+  width: 94%;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  padding: 30rpx 0;
+  transition: all 500ms;
+  background-color: rgba(0,0,0,.3);
+  backdrop-filter: blur(20px);
+  padding: 30rpx;
+}
+.isHidden{
+  bottom: -600rpx;
+}
+.item{
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  box-sizing: border-box;
+  padding: 10rpx;
+  display: flex;
+  color: #ddd;
+}
+.item .pid{
+  min-width: 40rpx;
+  text-align: left;
+}
+.item .name{
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item .author{
+  min-width: 120rpx;
+  text-align: right;
+}
+.active{
+  color: #0f0;
+}

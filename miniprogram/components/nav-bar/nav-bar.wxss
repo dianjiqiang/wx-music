@@ -1,0 +1,24 @@
+/* components/nav-bar/nav-bar.wxss */
+.nav{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 44px;
+}
+.nav .left, .nav .right{
+  width: 120rpx;
+}
+.nav .center{
+  flex: 1;
+}
+.default{
+  display: none;
+}
+.slot:empty + .default{
+  display: block;
+}
+.left .icon{
+  color: #fff;
+  font-size: 32rpx;
+}

@@ -1,0 +1,56 @@
+<!--pages/main-music/index.wxml-->
+<van-search
+  value="{{ searchValue }}"
+  shape="round"
+  background="#fafafa"
+  placeholder="请输入搜索关键词"
+  bind:focus="onFocusSearch"
+/>
+
+<banner-list banners="{{ bannerList }}"></banner-list>
+
+<!-- 推荐歌曲 -->
+<view class="recommend">
+  <area-header bind:moreClick="handleMoreClick" data-message="推荐歌曲" title="推荐歌曲"></area-header>
+  <view class="list">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <song-item-v1 itemData="{{item}}" bind:onSongClick="bindSongClick"></song-item-v1>
+    </block>
+  </view>
+</view>
+
+<!-- 热门歌单 -->
+<view class="hot-menu">
+  <area-header bind:moreClick="handleMoreClick" data-message="热门歌单" title="热门歌单"></area-header>
+  <scroll-view class="list" scroll-x enable-flex="{{true}}">
+    <block wx:for="{{hotMenuList}}" wx:key="id">
+      <menu-item class="item" itemData="{{item}}"></menu-item>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 推荐歌单 -->
+<view class="hot-menu">
+  <area-header bind:moreClick="handleMoreClick" data-message="推荐歌单" title="推荐歌单"></area-header>
+  <scroll-view class="list" scroll-x enable-flex="{{true}}">
+    <block wx:for="{{recMenuList}}" wx:key="id">
+      <menu-item class="item" itemData="{{item}}"></menu-item>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 巅峰榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜" isMore="{{false}}"></area-header>
+  <view class="rank-list">
+    <view>
+      <rank-item itemData="{{originalSongs}}" bindtap="handleMoreClick" data-message="原创榜"></rank-item>
+    </view>
+    <view>
+      <rank-item itemData="{{soaringSongs}}" bindtap="handleMoreClick" data-message="飙升榜"></rank-item>
+    </view>
+    <view>
+      <rank-item itemData="{{newSongs}}" bindtap="handleMoreClick" data-message="新歌榜"></rank-item>
+    </view>
+  </view>
+</view>

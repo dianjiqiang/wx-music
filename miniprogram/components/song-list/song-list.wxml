@@ -1,0 +1,18 @@
+<!--components/song-list/song-list.wxml-->
+<view class="views {{isHidden ? 'isHidden' : ''}}" style="background: url({{picUrl}});">
+  <scroll-view class="scroll-view  {{isHidden ? 'isHidden' : ''}}" scroll-y="{{true}}">
+    <block wx:for="{{playSongList}}" wx:key="id">
+      <view class="item {{activeIndex === index ? 'active' : ''}}" catchtap="changeActiveIndex" mark:index="{{index}}">
+        <view class="pid">
+          {{ index + 1 }}. 
+        </view>
+        <view class="name">
+          {{ item.name }}
+        </view>
+        <view class="author">
+          {{ item.ar[0].name }}
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
